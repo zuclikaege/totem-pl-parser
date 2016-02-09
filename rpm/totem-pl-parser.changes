@@ -1,0 +1,37 @@
+* Mon Dec 10 2012 Marko Saukko <marko.saukko@jollamobile.com> - 2.30.0
+- Updated packaging.
+
+* Tue Jun 26 2012 Marko Saukko <sage@merproject.org> - 2.30.0
+- Update packaging.
+
+* Fri Apr 2 2010 Yu <yu.a.wang@intel.com> - 2.30.0
+- Update to 2.30.0 
+
+* Sun Mar 28 2010 Anas Nashif <anas.nashif@intel.com> - 2.29.92
+- Update to 2.29.2
+- Remove bogus dependencies
+
+* Thu Sep 24 2009 Zhang Qiang <qiang.z.zhang@intel.com> - 2.28.0
+- Update to 2.28.0
+
+* Wed Sep 16 2009 Vivian Zhang <vivian.zhang@intel.com> - 2.27.92
+- Update to 2.27.92
+
+* Wed Aug 19 2009 Yi Yang <yi.y.yang@intel.com> - 2.27.2
+- Update to 2.27.2
+
+* Tue Jul 21 2009 Vivian Zhang <vivian.zhang@intel.com> - 2.26.0
+- Update to 2.27.1
+
+* Thu Apr 16 2009 Vivian Zhang <vivian.zhang@intel.com> - 2.26.0
+- Update to 2.26.1
+
+* Wed Mar 18 2009 Vivian Zhang <vivian.zhang@intel.com> - 2.26.0
+- Update to version 2.26.0
+
+* Tue Mar 10 2009 Vivian Zhang <vivian.zhang@intel.com> - 2.25.92
+- Update to version 2.25.92
+
+* Wed Jan 21 2009 Anas Nashif <anas.nashif@intel.com> - 2.25.1
+- Initial import into Moblin
+

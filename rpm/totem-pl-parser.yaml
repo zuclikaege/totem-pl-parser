@@ -7,9 +7,6 @@ License: LGPLv2+
 URL: http://www.gnome.org/projects/totem/
 Sources:
     - http://download.gnome.org/sources/%{name}/2.30/%{name}-%{version}.tar.bz2
-    - gnome-autogen.sh
-    - gnome-common.m4
-    - gnome-compiler-flags.m4
 Patches:
     - fix-automake.patch
 Description: A library to parse and save playlists, as used in music and movie players.
@@ -24,6 +21,7 @@ PkgBR:
     - gettext
     - perl(XML::Parser)
     - intltool
+    - gnome-common
 SetupOptions: -q -n %{name}-%{version}/%{name}
 LocaleName: "%{name}"
 LocaleOptions: --with-gnome

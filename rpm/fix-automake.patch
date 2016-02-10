@@ -1,15 +1,16 @@
 diff --git a/configure.in b/configure.in
-index b1b6f35..145ff76 100644
+index b1b6f35..6c32cfd 100644
 --- a/configure.in
 +++ b/configure.in
 @@ -126,8 +126,14 @@ AC_SUBST([AM_CFLAGS])
  AC_SUBST([AM_CXXFLAGS])
  AC_SUBST([AM_LDFLAGS])
  
+-GTK_DOC_CHECK(1.11)
 +AM_CONDITIONAL(ENABLE_GTK_DOC, test "x$enable_gtk_doc" = xyes)
 +AM_CONDITIONAL(HAVE_INTROSPECTION, test "x$have_introspection" = xyes)
 +m4_ifdef([GTK_DOC_CHECK], [
- GTK_DOC_CHECK(1.11)
++  GTK_DOC_CHECK(1.11)
 +])
 +m4_ifdef([GOBJECT_INTROSPECTION_CHECK], [
  GOBJECT_INTROSPECTION_CHECK([0.6.7])

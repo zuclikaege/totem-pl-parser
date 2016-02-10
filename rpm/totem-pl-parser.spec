@@ -15,9 +15,6 @@ Group:      System/Libraries
 License:    LGPLv2+
 URL:        http://www.gnome.org/projects/totem/
 Source0:    http://download.gnome.org/sources/%{name}/2.30/%{name}-%{version}.tar.bz2
-Source1:    gnome-autogen.sh
-Source2:    gnome-common.m4
-Source3:    gnome-compiler-flags.m4
 Source100:  totem-pl-parser.yaml
 Patch0:     fix-automake.patch
 Requires(post): /sbin/ldconfig
@@ -30,6 +27,7 @@ BuildRequires:  pkgconfig(gio-2.0) >= 2.24.0
 BuildRequires:  gettext
 BuildRequires:  perl(XML::Parser)
 BuildRequires:  intltool
+BuildRequires:  gnome-common
 
 %description
 A library to parse and save playlists, as used in music and movie players.
@@ -50,17 +48,12 @@ developing applications that use %{name}.
 # fix-automake.patch
 %patch0 -p1
 # >> setup
-%__mkdir m4
-%__cp $RPM_SOURCE_DIR/gnome-common.m4 m4/
-%__cp $RPM_SOURCE_DIR/gnome-compiler-flags.m4 m4/
-%__cp $RPM_SOURCE_DIR/gnome-autogen.sh .
-%__chmod 0755 gnome-autogen.sh
 # << setup
 
 %build
 # >> build pre
 echo "EXTRA_DIST = missing-gtk-doc" > gtk-doc.make
-NOCONFIGURE=1 ACLOCAL_FLAGS="-I m4" REQUIRED_PKG_CONFIG_VERSION=0.17.1 REQUIRED_AUTOMAKE_VERSION=1.9 USE_GNOME2_MACROS=1 . gnome-autogen.sh --disable-gtk-doc "$@"
+NOCONFIGURE=1 REQUIRED_PKG_CONFIG_VERSION=0.17.1 REQUIRED_AUTOMAKE_VERSION=1.9 USE_GNOME2_MACROS=1 . gnome-autogen.sh --disable-gtk-doc
 # << build pre
 
 %configure --disable-static
